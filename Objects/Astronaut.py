@@ -30,6 +30,7 @@ class Astronaut(RoomObject):
         #handles collision for Astronaut object
         if other_type == "Ship":
             self.room.delete_object(self)
+            self.room.score.update_score(50)
     
     def outside_of_room(self):
         # removes astronauts when outside of room
