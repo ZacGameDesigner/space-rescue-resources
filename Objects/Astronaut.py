@@ -29,6 +29,7 @@ class Astronaut(RoomObject):
     def handle_collision(self, other, other_type):
         #handles collision for Astronaut object
         if other_type == "Ship":
+            self.room.astronaut_saved.play()
             self.room.delete_object(self)
             self.room.score.update_score(50)
     
