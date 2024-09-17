@@ -14,7 +14,7 @@ class Asteroid(RoomObject):
         RoomObject.__init__(self,room, x, y)
         
         # set image
-        image = self.load_image("asteroid.png")
+        image = self.load_image("donut.png")
         self.set_image(image,50,49)
         
         # set travel direction
@@ -47,7 +47,6 @@ class Asteroid(RoomObject):
         removes asteroid that have exited the room
         """
         if self.x + self.width < 0:
-            print("asteroid deleted")
             self.room.delete_object(self)
             
     def handle_collision(self, other, other_type):

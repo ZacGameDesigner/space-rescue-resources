@@ -8,7 +8,7 @@ class GamePlay(Level):
         Level.__init__(self, screen, joysticks)
         
         # set background image
-        self.set_background_image("Background.png")
+        self.set_background_image("Background.jpg")
         
         #add ship
         self.add_room_object(Ship(self, 25, 50))

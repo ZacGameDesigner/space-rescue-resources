@@ -14,8 +14,8 @@ class Ship(RoomObject):
         RoomObject.__init__(self, room, x, y)
         
         # set image
-        image = self.load_image("Ship.png")
-        self.set_image(image,100,100)
+        image = self.load_image("Homerv1.jpg")
+        self.set_image(image,80,100)
         
         # register events
         self.handle_key_events = True
@@ -28,9 +28,9 @@ class Ship(RoomObject):
         """
         
         if key[pygame.K_w]:
-            self.y_speed = -10
+            self.y_speed = -15
         elif key[pygame.K_s]:
-            self.y_speed = 10
+            self.y_speed = 15
         if key[pygame.K_SPACE]:
             self.shoot_laser()
             

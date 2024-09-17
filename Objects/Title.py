@@ -21,4 +21,6 @@ class Title(RoomObject):
         """
         
         if key[pygame.K_SPACE]:
+            from time import sleep
+            sleep(0.5)
             self.room.running = False

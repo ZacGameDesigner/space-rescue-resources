@@ -20,6 +20,12 @@ class Score(TextObject):
         Globals.SCORE += change
         self.text = str(Globals.SCORE)
         self.update_text()
+    
+    def set_score(self, amount):
+        
+        Globals.SCORE = amount
+        self.text = str(Globals.SCORE)
+        self.update_text()
 
 class Lives(RoomObject):
     

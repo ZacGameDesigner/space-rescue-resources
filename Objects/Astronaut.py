@@ -1,4 +1,4 @@
-from GameFrame import RoomObject
+from GameFrame import RoomObject, Globals
 from GameFrame.Level import Level
 
 class Astronaut(RoomObject):
@@ -31,7 +31,11 @@ class Astronaut(RoomObject):
         if other_type == "Ship":
             self.room.astronaut_saved.play()
             self.room.delete_object(self)
-            self.room.score.update_score(50)
+            self.room.score.update_score(1)
+            if Globals.SCORE == 10:
+                self.room.running = False
+            else:
+                pass
     
     def outside_of_room(self):
         # removes astronauts when outside of room
